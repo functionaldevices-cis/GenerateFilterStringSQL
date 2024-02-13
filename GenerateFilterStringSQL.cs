@@ -232,7 +232,12 @@ namespace Mongoose.GlobalScripts
         public string BuildFilterString(string propertyName, string operatorString, string propertyValue)
         {
 
-            return " ( " + propertyName + " " + operatorString + " N'" + propertyValue + "' ) ";
+            // IF THE USER TYPES IN NULL OR NOT NULL, IT SHOULDN'T BE WRAPPED WITH SINGLE QUOTES OR N
+            if (propertyValue != "null" && propertyValue != "<>null")
+            {
+                propertyValue = "N'" + propertyValue + "'";
+            }
+            return " ( " + propertyName + " " + operatorString + " " + propertyValue + " ) ";
 
         }
 
