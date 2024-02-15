@@ -126,7 +126,7 @@ namespace Mongoose.GlobalScripts
 
                                 filters.Add(BuildFilterString(
                                     propertyName: "DATEPART( mm, " + propertyName + ")",
-                                    operatorString: operatorString,
+                                    operatorString: "=",
                                     propertyValue: datePartPair["DATE.MONTH"]
                                 ));
 
@@ -139,7 +139,7 @@ namespace Mongoose.GlobalScripts
 
                                 filters.Add(BuildFilterString(
                                     propertyName: "DATEPART( dd, " + propertyName + ")",
-                                    operatorString: operatorString,
+                                    operatorString: "=",
                                     propertyValue: datePartPair["DATE.DAY"]
                                 ));
 
@@ -152,7 +152,7 @@ namespace Mongoose.GlobalScripts
 
                                 filters.Add(BuildFilterString(
                                     propertyName: "DATEPART( yyyy, " + propertyName + ")",
-                                    operatorString: operatorString,
+                                    operatorString: "=",
                                     propertyValue: datePartPair["DATE.YEAR"]
                                 ));
 
