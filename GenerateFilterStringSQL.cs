@@ -12,7 +12,7 @@ using Mongoose.Core.Common.Deployment;
 namespace Mongoose.GlobalScripts
 {
 
-    public class FDI_GenerateFilterStringSQL : GlobalScript
+    public class GenerateFilterStringSQL : GlobalScript
     {
 
         /**********************************************************************************************************/
@@ -22,6 +22,7 @@ namespace Mongoose.GlobalScripts
         /* Organization: Functional Devices, Inc.                                                                 */
         /*                                                                                                        */
         /* Date:         2024-02-15                                                                               */
+        /* Version:      2.0.1                                                                                    */
         /*                                                                                                        */
         /* Purpose:      This script will build an SQL filter string that can be sent to Custom Load Methods      */
         /*               using the values which the user has entered while in FilterInPlace mode on a form. It    */
@@ -60,7 +61,7 @@ namespace Mongoose.GlobalScripts
 
                 // SHOW ERROR
 
-                this.Application.ShowMessage("FDI_GenerateFilterStringSQL Error: " + ex.Message);
+                this.Application.ShowMessage("GenerateFilterStringSQL Error: " + ex.Message);
                 this.ReturnValue = "1";
 
             }
